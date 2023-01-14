@@ -15,7 +15,7 @@ Scraper helps understand developers what are pespectives now on market.
 ## Installation
 
 ```bash
-git clone https://github.com/thepicture/hh-scraper
+git clone https://github.com/thepicture/hh-scraper.git
 ```
 
 ```bash
@@ -44,6 +44,8 @@ vim ./search-params.ts
 
 ## Configuration File Example
 
+Configuration file `search-params.ts` should be presented in the root directory. It contains an object the keys of which will be used as params for URL.
+
 ```js
 export const searchParams = {
   areas: [1, 2, ..., 3], // location codes from HH
@@ -59,11 +61,11 @@ export const searchParams = {
 };
 ```
 
-You can add another params and they will be parsed by app. Or you can remove params.
+You can add another params and they will be parsed by the app. Or you can remove params.
 
 # Export
 
-Scraper saves resume results as JSON files to `export/resumes` folder, with the filename as UNIX timestamp.
+Scraper saves resume results as JSON files to `export/resumes` folder, with the filename as UNIX timestamp. The folders should exist to work correctly.
 
 ### Rules Of Search Params
 
